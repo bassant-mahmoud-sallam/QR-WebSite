@@ -47,6 +47,9 @@ body {
     outline: none;
     color: #F2F5F9;
 }
+.container .inputQR form input::placeholder {
+    color: #F2F5F9;
+}
 .container .inputQR form button {
     background-color: #263FA9;
     border: none;

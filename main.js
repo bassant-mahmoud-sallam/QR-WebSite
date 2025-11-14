@@ -6,6 +6,7 @@ let QRPage = document.querySelector(".QR");
 let myForm = document.querySelector("form");
 let btnDownloud = document.querySelector(".download");
 let btnShare = document.querySelector(".share");
+let btnback = document.querySelector(".back");
 
 let qrcode;
 let currentQRText;
@@ -32,11 +33,13 @@ myForm.addEventListener("submit" , (e)=> {
         correctLevel : QRCode.CorrectLevel.H
     });
 
+    // clear the input feild
+    inputUrl.value = "";
+
     inputQRPage.classList.remove("activePage");
     QRPage.classList.add("activePage");
 });
-// clear the input feild
-inputUrl.value = "";
+
 
 // download btn
 btnDownloud.addEventListener("click" , ()=> {
@@ -75,5 +78,11 @@ btnShare.addEventListener("click" , ()=> {
     } 
     // there QR generated
     copyUrlQR(currentQRText);
+});
+
+// back button
+btnback.addEventListener("click" , ()=> {
+    inputQRPage.classList.add("activePage");
+    QRPage.classList.remove("activePage");
 })
 
