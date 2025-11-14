@@ -112,4 +112,7 @@ body {
     .container .inputQR {
         width: fit-content;
     }
+    .container .QR .btns {
+        flex-direction: column;
+    }
 }
